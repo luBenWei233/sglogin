@@ -1,0 +1,11 @@
+#是否禁止掉某个世界的指令
+enableCommandDisable: false
+#世界名，指令
+worldName:
+  - '/sethome'
+  - '/tpaccept'
+  - '/res create'
+IridiumSkyblock:
+  - '/kit tools'
+IridiumSkyblock_nether:
+  - '/kit tools'

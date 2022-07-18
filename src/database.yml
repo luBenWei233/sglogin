@@ -1,0 +1,20 @@
+#数据库名。支持，MySql、sqlite
+dataName: sqlite
+#数据库用户名
+username: root
+#数据库密码
+password: xxxxxx
+#数据库IP
+url: 192.168.1.7
+#数据库端口
+port: 3306
+#数据库名，指定数据库名后，会自动建立sglogin数据表
+database: mc
+#数据库连接池类型;支持，jdbc、c3p0(只有为MySql的时候才支持连接池)
+poolType: jdbc
+#数据库连接池最小数量(jdbc没有最大最小一说，只改最小值就行了)
+poolMinCount: 5
+#数据库连接池最大数量
+poolMaxCount: 20
+#是否关闭ssl连接，mysql5.6以上请设置为false
+ssl: false

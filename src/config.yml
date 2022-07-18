@@ -1,0 +1,100 @@
+#SGLogin2.5 更轻量极的登陆插件，完美支持1.12.x-1.16.x
+#作者：极客LF，Email:1048885612@qq.com，B站搜索：哔哩_大帅哥
+#关于所有的禁止登陆时间
+#比如：某玩家10分钟内加入了30次游戏，被暂时拒绝登陆了
+#     那么，在他第30次加入游戏的时候，是在第3分钟，那
+#     么，7分钟之内他不能再登陆了。
+#密码的正则表达式
+cipherRegularity: '^[A-Za-z0-9!@#$%^&*+-.]+$'
+#密码最小长度
+minPass: 6
+#密码最大长度
+maxPass: 16
+#密码格式输错的提醒
+passerRoralert: '密码只能为字母、数字、!@#$%^&*+-.组成且不能超过16位或小于6位！'
+#已经登陆时又登陆或注册时的提示
+alreadyLoggedin: '您已经登陆了，不用再登陆了!'
+#登陆成功
+loginSucceeded: '登陆成功，欢迎来到我的世界！'
+#登陆时密码输错
+loginPassError: '密码错误，请检查后重试！'
+#在规定的时间内输错多少次密码，会临时禁止某账号和IP的登陆
+tempBanLoginAndIpForCount: 20
+#规定输错密码的时间，单位：秒
+tempBanLoginAndIpForTime: 600
+#规定时间内多次输错密码拒绝登陆的时间，单位：秒
+tempBanLoginAndIpForRefuse: 1200
+#多次输错密码的提示
+tempBanLoginAndIpForAlert: '你10分钟内输错20次密码，20分钟内不能再登陆游戏！'
+#登陆时输错多少次密码将被踢出服务器（一次）
+loginInputErrorPassCount: 3
+#登陆时多次输错密码时被踢出的提示
+loginInputErrorPassAlert: '你本次登陆输错3次密码，请仔细检查后重试！' 
+#登陆时命令格式错误的提示
+loginCommandError: '正确格式：/l 密码' 
+#注册成功后的提醒
+registerSucceeded: '注册成功，欢迎来到帅哥世界！再次进入服务器时可输入：/l 密码（进行登陆）'
+#是否开启注册功能
+isRegister: true
+#不开启注册时，玩家被踢出时的提示
+isRegisterAlert: 为防止恶意注册，请前往 http://www.xxxxxx.com 进行注册！
+#每个IP每天的最大注册量
+registerIpCount: 3
+#每个IP每天超过注册量，禁止注册的提醒
+registerIpAlert: '此IP已经在一天内注册了3个帐号，请随后再注册！'
+#注册失败时的提示，这种情况下，一般是数据库出了问题，或者联系作者，QQ:1048885612
+registerError: '注册失败，请联系管理员！'
+#两次密码输入不一致的提示
+registerPassInconformity: '两次密码输入不一致，请重新输入！'
+#注册格式错误时的提示
+registerFormatError: '注册格式错误，正确的格式为,示例：/reg 123456 123456'
+#玩家登陆时的登陆提示
+playerLoginAlert: '§2请输入“/l 密码 （进行游戏登陆,l是大写的L）如果忘记密码请输入：/recover [绑定的邮箱]'
+#玩家登陆时的注册提示
+playerRegisterAlert: '§2请输入“/reg 密码 再次输入密码（进行游戏注册）'
+#玩家登陆时注册或登陆提示的间隔时间,20=1秒，100也就是5秒提示一次
+playerLoginTime: 100
+#玩家登陆时注册或登陆提示的次数，超过该次数未完成登陆或注册者会被自动踢出
+playerLoginCount: 7
+#玩家在规定时间内的最大退出游戏次数的时间,单位：秒
+playerExitTime: 600
+#玩家在规定时间内的最大退出游戏的次数
+playerExitCount: 40
+#玩家在规定时间内超过最大加入退出游戏的次数的提示
+playerExitAlert: '您10分钟内加入和退出游戏超过40次，请10分钟后再登陆！'
+#非登陆玩家输入非登陆或注册指令时的提示
+playerNotLoginInputCommand: '§4您还未登陆，请先登陆或注册！'
+#规定时间未登陆或注册提示
+playerNotLoginAlert: '给你的登陆时间已经过了，请重新登陆！'
+#游戏中已经存在该玩家，但其他人继续登陆
+playerIsOnLineAlert: '此玩家已经登陆，若被盗号请联系管理员！'
+#是否开启每个IP最大登陆
+isplayerIpOnline: false
+#每个IP的最大同时登陆数
+playerIpOnlineCount: 3
+#每个IP超过最大同时登陆数时提醒
+playerIpOnlineAlert: '此IP最多同时登陆3个帐号！'
+#两个大小写不一样的帐号，禁止它登陆
+playerIdenticalName: '如果这个帐号是您的，你可以尝试用 [orderName] 登陆！您当前的ID为：[playerName]'
+#不合法的帐号正则表达式，{}中的3和20代表长度
+playerName: '^[a-zA-Z0-9_-]{3,20}$'
+#不合法帐号的提示
+playerNameAlert: '用户名只能为字母、数字、下滑线组成，不能有中文且长度不超20或小于3位！'
+#是否开启同一IP加入游戏次数的限制在规定的时间 true=开启，false=关闭
+playerJoinIpOn: false
+#同一IP加入游戏次数的总次数
+playerJoinIpCount: 50
+#同一IP加入游戏次数的规定时间，单位：秒
+playerJoinIpTime: 600
+#同一IP加入游戏的次数超过规定的时间内，提示
+playerJoinIpAlert: '此IP加入游戏过于频繁，10分钟内只允许加入30次，请稍候重试！'
+#玩家在密码修改成功后的提示
+changePwdSuccessAlert: '修改成功，下次请用该密码登陆！'
+#玩家在密码修改失败后的提示
+changePwdFailAlert: '修改失败，请联系密码员！'
+#玩家修改密码时，旧密码输入错误时的提示
+changePwdOldPwdError: '旧密码错误，修改失败！'
+#玩家修改密码时，指令格式不正确的提示
+changePwdFormatError: '修改密码的格式为：/changepassword [旧密码] [新密码] [重复新密码]'
+#在控制台输入玩家输入的指令时，提示（玩家看不到）
+notPlayer: '[帅哥提示您]本指令只能由玩家输入，控制台不行！'

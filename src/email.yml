@@ -1,0 +1,61 @@
+#在这里配置你的发送邮件功能，可用于玩家的密码找回
+#是否启用邮箱：（true=开启，false=关闭）
+enable: false
+#你的邮相帐号
+emailAccount: "1048885612@qq.com"
+#邮箱密码或授权码
+emailPwd: "xxxxxxxxxxxx"
+#邮件主机
+emailSmtpHost: "smtp.qq.com"
+#端口
+emailSmtpPort: "465"
+#是否启用安全验证：（true=开启，false=关闭）
+sslAuthVerify: true
+#是否启debug模式：（true=开启，false=关闭）开启后控制台会看到发送全过程
+enableDebug: false
+#邮件主题
+emailTheme: "帅哥自由服"
+#邮件标题
+emailTitle: "密码找回"
+#邮件内容
+emailContent: "<p>您于[date]请求找回密码，如果这不是你的请求或根本不知道什么是帅哥自由服！那么请无视该邮件！</p><p>登陆之前输入：/recover [code] 新密码 重复密码</p><p>15分钟内有效！</p>"
+#每位玩家发送邮件时，在某一时间内的最大发送量
+emailSendCount: 3
+#每位玩家在发邮件时，某一时间，单位：秒
+emailSendTime: 43200
+#当玩家超过最大发送量继续发邮件的时的提示
+emailSendAlert: "您每12小时只能发送3封邮件，如有疑问请联系管理员"
+#玩家发送邮件时，但未开启邮箱功能时的提醒
+emailDisableAlert: "邮件功能未开启，无法使用！！！"
+#玩家经登陆了，尝试发邮件时
+emailLoginSendAlert: "您已经登陆了，不用发送邮件来修改密码了"
+#验证码的过期时间,单位：秒
+emailCodeOverdueTime: 900
+#验证证过期失效时的提示
+emailCodeOverdueAlert: "您的验证码已经失效了！请重新发邮件找回！"
+#玩家还未发送邮件，但已经要修改密码时(这时不一定知道它是失效还是没发送)
+emailNotSendDoChangeAlert: "您还没有发送邮件或者验证码已经失效！"
+#邮件发送成功
+emailSendSuccessAlert: "邮件发送成功，快快去邮箱查看吧！"
+#邮件发送失败
+emailSendFailAlert: "邮件发送失败，请重试或联系管理员！"
+#玩家在尝试发送邮件时，输入的和之前绑定的不一样时
+emailInputErrorAlert: "您输入的邮件和您绑定时的不一样，请检查后重试！"
+#还未注册的用户企图发邮件时
+emailNotRegAlert: "您都没有注册，找回什么密码啊？"
+#玩家输入的验证码于邮箱中的不一致时的提示
+emailInputCodeErrorAlert: "您的验证码输入错误，还是复制邮件中的吧！"
+#玩家连续输错多少次验证码时被踢出
+emailInputCodeCount: 5
+#玩家连续输错验证码时被踢出的提示
+emailInputCodeKickAlert: 您的验证码连续输错5次，现在已被系统踢出！
+#密码重置时的提示（这时已经自动登陆）
+emailChangePwdSuccessAlert: "密码重置成功，下次用本次修改的密码登陆哦!"
+#密码重围失败时（一般为数据库问题）
+emailChangePwdFailAlert: "密码重置失败，请联系管理员！"
+#玩家输入了错误的邮件找回指令
+emailErrorCommand: "邮件指令格式输入错误，请输入/help sglogin查看正确指令"
+#玩家未绑定邮箱时，登陆时对他是否提示（true=开启，false=关闭）
+emailIsAlert: true
+#玩家未绑定邮箱时，登陆时对他的提示
+emailAlertContent: "§6您还未绑定邮箱，请输入：/email add [邮箱] [重复邮箱]"

@@ -1,0 +1,67 @@
+name: SGLogin
+main: org.sg.lf.sglogin.SGLoginMain
+version: 3.0
+commands:
+ reg:
+  description: reg [密码] [再次输入密码]
+ l:
+  description: l [密码]
+ register:
+  description: register [密码] [再次输入密码]
+ login:
+  description: login [密码]
+ changepassword:
+  description: changepassword [旧密码] [新密码] [重复新密码]
+ email:
+  description: email add [邮箱] [确定邮箱] （邮箱绑定）|email [旧邮箱] [新邮箱] [重复新邮箱] （邮箱修改）|email show (查看自己绑定的邮箱)
+ sglogin:
+  description: sglogin help (查看更多管理员帮助)
+ recover:
+  description: recover [自己绑定的邮箱] （找回自己的密码）
+permissions:
+ sglogin.admin.*:
+  description: SGLogin管理员指令
+ children:
+    sglogin.admin.password: true
+    sglogin.admin.register: true
+    sglogin.admin.remove: true
+    sglogin.admin.plyerban: true
+    sglogin.admin.plyerreason: true
+    sglogin.admin.playerinfo: true
+    sglogin.admin.clear: true
+ sglogin.admin.password:
+  description: sglogin changepassword [用户名] [新密码] [重复密码] （允许您修改一名用户的密码）
+  default: op
+ sglogin.admin.register:
+  description: sglogin register [用户名] [密码] [重复密码] （允许您创建一名用户）
+  default: op
+ sglogin.admin.remove:
+  description: sglogin remove [用户名] （允许您移除一名用户,但不删除游戏数据）
+  default: op
+ sglogin.admin.plyerban:
+  description: sglogin ban [用户名] [时长] [理由ID]（1d=1天、1h=1小时、1m=1分钟）
+  default: op
+ sglogin.admin.plyerreason:
+  description: sglogin 指令格式错误，正确应为：sglogin reason [add/update/del](详情sglogin help)
+  default: op
+ sglogin.admin.playerinfo:
+  description: sglogin get [用户名]
+  default: op
+ sglogin.admin.clear:
+  description: sglogin clear
+  default: op
+ sglogin.admin.spawnset:
+  description: sglogin spawnset（将您当前位置设置成玩家登陆之前的世界和位置）
+  default: op
+ sglogin.admin.tpset:
+  description: sglogin before（将您当前位置设置成玩家登陆之后的世界和位置）
+  default: op
+ sglogin.admin.enablelogin:
+  description: sglogin enable true/false（开启登陆强制位置）
+  default: op
+ sglogin.admin.tp:
+  description: sglogin tp true/false（开启后，登陆后的玩家将传送到他上次下线的位置）
+  default: op
+ sglogin.admin.reload:
+  description: sglogin reload（重新加载配置文件）
+  default: op
